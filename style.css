@@ -6,27 +6,38 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #eef2f7;
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
+    width: 100%;
+    max-width: 600px;
+
     background: white;
-    width: 500px;
-    padding: 30px;
 
-    border-radius: 15px;
+    padding: 35px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 h1 {
     text-align: center;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+#contador {
+    text-align: center;
+    color: #777;
     margin-bottom: 25px;
 }
 
@@ -37,22 +48,35 @@ h1 {
 
 input {
     flex: 1;
-    padding: 12px;
 
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 14px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #007bff;
 }
 
 button {
-    padding: 12px 18px;
-
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
+
+    padding: 12px 18px;
 
     background: #007bff;
     color: white;
 
+    font-size: 15px;
+
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
 button:hover {
@@ -61,7 +85,7 @@ button:hover {
 
 ul {
     list-style: none;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 li {
@@ -69,10 +93,59 @@ li {
     justify-content: space-between;
     align-items: center;
 
-    padding: 12px;
+    padding: 15px;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
-    background: #f5f5f5;
-    border-radius: 8px;
+    background: #f5f7fa;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+}
+
+li span {
+    cursor: pointer;
+    flex: 1;
+}
+
+li button {
+    background: #dc3545;
+    padding: 8px 12px;
+}
+
+li button:hover {
+    background: #b02a37;
+}
+body.escuro {
+    background: #121212;
+}
+
+body.escuro .container {
+    background: #1e1e1e;
+}
+
+body.escuro h1 {
+    color: white;
+}
+
+body.escuro #contador {
+    color: #bbb;
+}
+
+body.escuro input {
+    background: #2b2b2b;
+    color: white;
+    border-color: #444;
+}
+
+body.escuro li {
+    background: #2b2b2b;
+    border-color: #444;
+    color: white;
+}
+
+#botaoTema {
+    display: block;
+    margin: 15px auto 0;
 }

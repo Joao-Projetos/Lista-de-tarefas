@@ -95,3 +95,28 @@ function atualizarContador() {
         contador.textContent = `Você tem ${quantidade} tarefas`;
     }
 }
+function alternarTema() {
+
+    document.body.classList.toggle("escuro");
+
+    if (document.body.classList.contains("escuro")) {
+
+        localStorage.setItem("tema", "escuro");
+
+    } else {
+
+        localStorage.setItem("tema", "claro");
+
+    }
+}
+function carregarTema() {
+
+    const tema = localStorage.getItem("tema");
+
+    if (tema === "escuro") {
+
+        document.body.classList.add("escuro");
+
+    }
+}
+carregarTema();
